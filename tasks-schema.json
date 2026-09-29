@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org",
+  "title": "Task",
+  "type": "object",
+  "required": ["title", "details", "completed", "created", "user"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The main name or headline of the to-do task."
+    },
+    "details": {
+      "type": "string",
+      "description": "Additional descriptions or sub-items for the task."
+    },
+    "completed": {
+      "type": "boolean",
+      "description": "Tracks completion status (true = finished, false = active)."
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of when the task was created; used to sort the lists chronologically."
+    },
+    "user": {
+      "type": "string",
+      "description": "A path string or reference identifier linking this task to a specific document in the users collection."
+    }
+  }
+}
