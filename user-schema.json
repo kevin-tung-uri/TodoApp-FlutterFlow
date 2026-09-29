@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org",
+  "title": "User",
+  "type": "object",
+  "required": ["email", "display_name"],
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The user's primary login email address."
+    },
+    "display_name": {
+      "type": "string",
+      "description": "The user's chosen full name or public display name."
+    },
+    "photo_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The reference URL to the user's uploaded profile picture stored in Firebase Storage."
+    }
+  }
+}
